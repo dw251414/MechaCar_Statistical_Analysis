@@ -5,7 +5,7 @@ This project involves the use of statistics and hypothesis testing to analyze a 
 All of the statistical analysis and visualizations is written in the R programming language.
 
 ## Resources
-- Data Source: [MechaCar_mpg.csv](https://github.com/dw251414/MechaCar_Statistical_Analysis/blob/main/MechaCar_mpg.csv), [Suspension_Coil.csv](https://github.com/dw251414/MechaCar_Statistical_Analysis/blob/main/Suspension_Coil.csv)
+- Data Source: [MechaCar_mpg.csv] & [Suspension_Coil.csv] *referenced in Main
 - Software: RStudio 1.4.1717
 ---
 ### Linear Regression to Predict MPG
@@ -20,14 +20,14 @@ All of the statistical analysis and visualizations is written in the R programmi
 ```
 mpg = 6.27 * vehicle_length + 1.25e-3 * vehicle_weigth + 6.88e-2 * spoiler_angle -3.41 * AWD + 3.55 * ground_clearance - 1.04e+2
 ```
-Approximated to:
+Approximation:
 
 ```
 mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * ground_clearance - 104
 ```
-So the slope of the linear model is not considered to be zero.
+This linear model's slope is not considered to be zero.
 
-- R-square is 0.71 so 71% of the variations in mpg can be explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain and the ground clearance. We can consider this linear model as fairly efficient to predict mpg of MechaCar prototypes.
+- R-square is 0.71 so 71% of the variations in mpg can be explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain and the ground clearance. This linear model efficiently predicts mpg of MechaCar prototypes.
 
 <br>
 
@@ -43,9 +43,9 @@ So the slope of the linear model is not considered to be zero.
 <img width="718" alt="Screen Shot 2021-07-31 at 12 25 38 PM" src="https://user-images.githubusercontent.com/82069038/127746693-ba54054a-95f7-4871-a2de-10a8e2eecfa9.png">
 </p>
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.\
-The design specs are respected for all manufacturing lots in total with a global variance of 62.3 psi.\
-On the lot level, Lot 1 and Lot 2 are into specs with respectively variances of 0.98 and 7.5 psi. The Lot 3 is out of specs with a variance of 170.3 psi.
+Design specs for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.\
+Design specs are respected for all manufacturing lots in total with a global variance of 62.3 psi.\
+Lot 1 and Lot 2 are into specs with respectively variances of 0.98 and 7.5 psi. The Lot 3 is out of specs with a variance of 170.3 psi.
 
 <br>
 
@@ -57,7 +57,7 @@ On the lot level, Lot 1 and Lot 2 are into specs with respectively variances of 
 <img width="657" alt="Screen Shot 2021-07-31 at 12 27 28 PM" src="https://user-images.githubusercontent.com/82069038/127746717-caef56c5-65a2-42a8-9ebc-9a1d828d0185.png">
 </p>
 
-Assuming our significance level is the common 0.05 percent, our p-value of 0.069 is above the significance level. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we can state that the PSI across all manufacturing lots is statiscally similar to the population mean of 1498.78 psi.
+Assuming our significance level is 0.05 percent, our p-value of 0.069 is above the significance level. Subsequently, we do not have convincing support to reject the null hypothesis, and we can state that the PSI across all manufacturing lots is statiscally similar to the population mean of 1498.78 psi.
 
 #### T-Tests each manufacturing lot against the population mean
 
@@ -91,8 +91,9 @@ To compare the performance of the MechaCar prototype against the vehicles from t
 
 In our case the null hypothesis would be: each performance metrics is statistically similar between the MechaCar prototype and all vehicle from the other manufacturers.
 
-We would use a one-way ANOVA test. This test is used to compare the means of a continuous numerical variable across a number of groups.\
-So in this analysis we would compare the means for each metric across the different manufacturers.
+Using a one-way ANOVA test, this test compares the means of a continuous numerical variable across a number of groups.\
+For this analysis we would compare the means for each metric across the different manufacturers.
 
-To perform the test, we would need data of MechaCar vehicles and its competition, all gathered in a single dataframe where each metric is a column.\
-The data could be scraped from vehicle data APIs such as [scrapinghub.com/data-api-vehicle](https://www.scrapinghub.com/data-api-vehicle/) or [carqueryapi.com](https://www.carqueryapi.com/).
+Performing this test, we would need data of MechaCar vehicles and its competition, all gathered in a single dataframe where each metric is a column.\
+The data could be scraped from vehicle data APIs such as:
+[scrapinghub.com/data-api-vehicle](https://www.scrapinghub.com/data-api-vehicle/) or [carqueryapi.com](https://www.carqueryapi.com/).
