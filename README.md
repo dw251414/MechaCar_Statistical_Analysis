@@ -5,7 +5,7 @@ This project involves the use of statistics and hypothesis testing to analyze a 
 All of the statistical analysis and visualizations is written in the R programming language.
 
 ## Resources
-- Data Source: [MechaCar_mpg.csv] & [Suspension_Coil.csv] *referenced in Main
+- Data Sources: [MechaCar_mpg.csv] & [Suspension_Coil.csv] *referenced in Main
 - Software: RStudio 1.4.1717
 ---
 ### Linear Regression to Predict MPG
